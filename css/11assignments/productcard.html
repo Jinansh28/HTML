@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title> 
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+        }
+        h2{
+            margin-bottom: 10px;
+        }
+        .navbar{
+            background-color: #232F3E;
+            padding: 20px;
+        }
+        .navbar ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar li{
+            display: inline;
+        }
+        .navbar a{
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 15px;
+            position: relative;
+        }
+        .navbar a::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 100%;
+            background-color: #749bca;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+        .navbar a:hover::after{
+            transform: scaleX(1);
+        }
+        .container{
+            background: radial-gradient(#e66465, #9198e5);
+            height: 100vh;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content{
+            border: 1px solid black;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 400px;
+            color: #232F3E;
+        }
+        .logo{
+            width: 150px;
+            object-fit: contain;
+        }
+        button{
+            background-color: #ff3087;
+            border: none;
+            color: #fff;
+            padding: 5px 15px;
+            margin: 10px;
+        }
+        .btns{
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="content">
+            <img src="../images/Shoes.jpg" class="logo" alt="Shoes">
+            <h2>BRUTON EVA Lite</h2>
+            <p>Sport Shoes, Running Shoes for Men- White</p>
+            <div class="btns">
+                <button type="submit">Add to Cart</button>
+                <button type="submit">Buy Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
